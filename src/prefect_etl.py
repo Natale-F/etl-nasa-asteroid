@@ -101,4 +101,3 @@ def asteroid_etl(url: str, start_date: str, api_key: str, engine, log):
     except Exception as e:
         log.error(e)
         return False
-"Feature (v1 of the ETL using prefect): create the ETL process using prefect package & add corresponding tests & deployment files"

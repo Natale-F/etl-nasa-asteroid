@@ -3,7 +3,7 @@
 Simple ETL project that request the asteroids's Nasa API to get weekly asteroids near to Earth (today -7 days) with corresponding informations, then load it 
 into a postgre database.
 
-The pipeline is done using [prefect](https://www.prefect.io/) package To discover this technology.
+The pipeline is done using [prefect](https://www.prefect.io/) package to discover this technology.
 
 ## Installation
 
