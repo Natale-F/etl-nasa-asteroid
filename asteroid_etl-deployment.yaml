@@ -1,0 +1,62 @@
+###
+### A complete description of a Prefect Deployment for flow 'ELT Nasa asteroid flow'
+###
+name: asteroid-etl
+description: The ETL process to get asteroid data from the Nasa API and store       these
+  informations into a PostgreSQL database
+version: 65a742c4b98c233950304e953540c823
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {}
+schedule:
+  cron: 0 1 * * *
+  timezone: null
+  day_or: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: ELT Nasa asteroid flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 164b1bf6-67ba-46af-863d-5f5bc6098738
+  _block_document_name: anonymous-937ae553-4fe0-46fc-9f57-6a846a925667
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: D:\Projets personnels\etl-nasa-asteroid
+entrypoint: flow_service.py:asteroid_etl
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    url:
+      title: url
+      type: string
+    start_date:
+      title: start_date
+      type: string
+    api_key:
+      title: api_key
+      type: string
+    engine:
+      title: engine
+    log:
+      title: log
+  required:
+  - url
+  - start_date
+  - api_key
+  - engine
+  - log
+  definitions: null
